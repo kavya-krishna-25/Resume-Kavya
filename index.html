@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Portfolio Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>My Portfolio Website - Kavya CK</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<header>
-    <h1 class="title">Welcome to My Website</h1>
-</header>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="resume.html">Resume</a>
-    <a href="biodata.html">Bio-data</a>
-</nav>
-<section class="home">
-    <img src="images/profile.jpg" class="profile-img" alt="Profile Photo">
-    <p>Hello! I am <b>Kavya CK</b>. Welcome to my personal website.</p>
-    <button id="changeColorBtn">Click to Change Background Color</button>
-</section>
+<div class="page-wrapper">
+    <div class="gradient-bar top"></div>
+
+    <header class="hero">
+        <div class="hero-left">
+            <h1 class="title">Hi — I'm Kavya</h1>
+            <p class="hero-sub">A Computer Science student building simple, accessible web experiences and exploring data &amp; machine learning. Browse my resume, biodata, projects, and demos below.</p>
+            <p class="hero-links">
+                <a class="link" href="resume.html">View Resume</a>
+                <span class="sep">·</span>
+                <a class="link" href="biodata.html">View Bio-data</a>
+            </p>
+        </div>
+        <div class="hero-right">
+            <div class="profile-card">
+                <img src="images/profile.jpg" alt="Profile" class="profile-img-card">
+            </div>
+        </div>
+    </header>
+
+    <main class="cards-area">
+        <div class="card">
+            <h3>Resume</h3>
+            <p>Structured resume with skills and contact. Click to view the full resume and download a printable.</p>
+            <a class="card-link" href="resume.html">Open Resume →</a>
+        </div>
+
+        <div class="card">
+            <h3>Bio-data</h3>
+            <p>Concise biodata including personal details, objective, education and skills.</p>
+            <a class="card-link" href="biodata.html">Open Bio-data →</a>
+        </div>
+    </main>
+
+    <div class="gradient-bar bottom"></div>
+</div>
+
 <script src="js/script.js"></script>
 </body>
 </html>
