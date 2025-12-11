@@ -1,27 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Kavya CK</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<h1 class="title">My Resume</h1>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="resume.html">Resume</a>
-    <a href="biodata.html">Bio-data</a>
+<body class="resume-page">
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html">Home</a>
+        <a href="resume.html" class="active">Resume</a>
+        <a href="biodata.html">Bio-data</a>
+    </div>
 </nav>
-<section class="content">
-    <h2>Education</h2>
-    <ul>
-        <li>BE in Computer Science and Engineering (Ongoing)</li>
-        <li>Adichunchanagiri Institute of Technology</li>
-    </ul>
-    <h2>Skills</h2>
-    <ul>
-        <li>HTML, CSS, JavaScript, jQuery</li>
-        <li>Python, Deep Learning</li>
-    </ul>
-</section>
+
+<div class="resume-container">
+    <!-- Header with Profile -->
+    <header class="resume-header">
+        <div class="header-content">
+            <h1>Kavya CK</h1>
+            <p class="tagline">Computer Science student • Web development & Machine Learning</p>
+            <div class="header-links">
+                <a href="#" class="header-link">View full resume</a>
+                <span class="link-sep">·</span>
+                <a href="biodata.html" class="header-link">Bio-data</a>
+            </div>
+        </div>
+        <div class="header-profile">
+            <div class="profile-circle">
+                <img src="images/profile.jpg" alt="Profile" class="profile-image">
+            </div>
+        </div>
+    </header>
+
+    <!-- Two Column Layout -->
+    <div class="resume-layout">
+        <!-- Left Column -->
+        <div class="resume-left">
+            <section class="resume-section">
+                <h2 class="section-title">Personal Details</h2>
+                <div class="detail-group">
+                    <div class="detail-item">
+                        <label>Name</label>
+                        <p>Kavya CK</p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Date of birth</label>
+                        <p>25-06-2003</p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Gender</label>
+                        <p>Female</p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Nationality</label>
+                        <p>Indian</p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Location</label>
+                        <p>Chikkamagalur, Karnataka</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <h2 class="section-title">Education</h2>
+                <div class="edu-item">
+                    <h3>B.E. 3rd year, Computer Science</h3>
+                    <p class="edu-meta">Expected 2027</p>
+                    <p class="edu-desc">Adichunchanagiri Institute of Technology</p>
+                </div>
+                <div class="edu-item">
+                    <p class="edu-meta">Relevant coursework:</p>
+                    <p class="edu-desc">Data Structures, Algorithms, Web Development, Intro to Machine Learning</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Column -->
+        <div class="resume-right">
+            <section class="resume-section">
+                <h2 class="section-title">Career Objective</h2>
+                <p class="objective-text">Motivated Computer Scientist seeking internship or entry-level opportunities in web development and data science. Aims to apply protocol coding skills and foundational ML knowledge to build accessible, user-focused applications and learn industry best practices.</p>
+            </section>
+
+            <section class="resume-section">
+                <h2 class="section-title">Contact</h2>
+                <p class="contact-email"><a href="mailto:kavyagowd2003@gmail.com">kavyagowd2003@gmail.com</a></p>
+            </section>
+
+            <section class="resume-section">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-container">
+                    <span class="skill-tag">HTML & CSS</span>
+                    <span class="skill-tag">JavaScript & jQuery</span>
+                    <span class="skill-tag">Python (basics) & ML</span>
+                    <span class="skill-tag">Responsive Design</span>
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <h2 class="section-title">Interests / Career Details</h2>
+                <p class="interests-text">Interested in front-end development, UI/UX, accessibility, and applying basic machine learning techniques to small datasets.</p>
+            </section>
+        </div>
+    </div>
+</div>
+
+<footer class="resume-footer">
+    <p>&copy; 2025 Kavya CK. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
