@@ -1,36 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bio-data</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio-data - Kavya CK</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-3.6.0.min.js"></script>
 </head>
-<body>
-<h1 class="title">Bio-data</h1>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="resume.html">Resume</a>
-    <a href="biodata.html">Bio-data</a>
+<body class="biodata-page">
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="biodata.html" class="active">Bio-data</a>
+    </div>
 </nav>
-<div id="biodata-box">
-    <h2>Loading Bio-data...</h2>
+
+<div class="biodata-wrapper">
+    <!-- Sidebar -->
+    <aside class="biodata-sidebar">
+        <div class="sidebar-card">
+            <div class="profile-avatar">
+                <img src="images/profile.jpg" alt="Profile" class="profile-image">
+            </div>
+            <p class="sidebar-tagline">Computer Science student • web development & ML</p>
+            <button class="download-btn">📥 Download PDF</button>
+            
+            <div class="sidebar-info">
+                <h4>Quick Links</h4>
+                <a href="resume.html">View Resume</a>
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="biodata-main">
+        <!-- About Section -->
+        <section class="biodata-section">
+            <h2 class="section-heading">About</h2>
+            <div class="section-content">
+                <p>I am a passionate learner exploring web technologies and machine learning. I-d – small projects that solve real problems and help me loom new skills.</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="biodata-section">
+            <h2 class="section-heading">Skills</h2>
+            <div class="section-content">
+                <div class="skills-list">
+                    <span class="skill-badge">HTML & CSS</span>
+                    <span class="skill-badge">JavaScript & jQuery</span>
+                    <span class="skill-badge">Python & DSA basics</span>
+                    <span class="skill-badge">Responsive Design</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="biodata-section">
+            <h2 class="section-heading">Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p class="project-desc">Personal portfolio website showcasing resume, biodata, projects, and skills. A responsive web application built with modern design principles featuring smooth navigation, professional styling, and clean layout. Tech: HTML/CSS/JavaScript. Difficulty: Intermediate</p>
+                    <a href="index.html" class="project-link">View →</a>
+                    <div class="project-thumb">
+                        <svg width="100%" height="150" viewBox="0 0 300 150" fill="none" style="background: linear-gradient(135deg, #f0f8ff 0%, #e8e4f3 100%);">
+                            <rect width="300" height="150" fill="url(#grad1)"/>
+                            <text x="150" y="75" font-size="16" fill="#7c5cda" text-anchor="middle" dominant-baseline="middle" font-family="Arial">Project Thumbnail</text>
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#f0f8ff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#e8e4f3;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3>Registration App</h3>
+                    <p class="project-desc">User registration application with form validation, error handling, and data storage. Features include input validation, password strength checking, and user-friendly interface. Built to demonstrate web form handling and front-end validation techniques. Tech: HTML/CSS/JavaScript. Difficulty: Intermediate</p>
+                    <a href="#" class="project-link">View →</a>
+                    <div class="project-thumb">
+                        <svg width="100%" height="150" viewBox="0 0 300 150" fill="none" style="background: linear-gradient(135deg, #f0f8ff 0%, #e8e4f3 100%);">
+                            <rect width="300" height="150" fill="url(#grad2)"/>
+                            <text x="150" y="75" font-size="16" fill="#7c5cda" text-anchor="middle" dominant-baseline="middle" font-family="Arial">Project Thumbnail</text>
+                            <defs>
+                                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#f0f8ff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#e8e4f3;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Personal Details Section -->
+        <section class="biodata-section biodata-details">
+            <h2 class="section-heading">Personal Details</h2>
+            <div id="biodata-box" class="details-grid">
+                <div class="loading">Loading personal details...</div>
+            </div>
+        </section>
+    </main>
 </div>
+
+<footer class="biodata-footer">
+    <p>&copy; 2025 Javeriya. All rights reserved.</p>
+</footer>
+
 <script>
-$(document).ready(function(){
-    $.getJSON("data/biodata.json", function(data){
-        let html = `
-            <table>
-                <tr><td>Name</td><td>${data.name}</td></tr>
-                <tr><td>DOB</td><td>${data.dob}</td></tr>
-                <tr><td>Gender</td><td>${data.gender}</td></tr>
-                <tr><td>Nationality</td><td>${data.nationality}</td></tr>
-                <tr><td>Father</td><td>${data.father}</td></tr>
-                <tr><td>Mother</td><td>${data.mother}</td></tr>
-            </table>
-        `;
-        $("#biodata-box").html(html);
-    });
+document.addEventListener('DOMContentLoaded', function(){
+    fetch('data/biodata.json')
+        .then(function(response){
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        })
+        .then(function(data){
+            var html = 
+                '<div class="detail-row"><span class="detail-label">Name</span><span class="detail-value">' + data.name + '</span></div>' +
+                '<div class="detail-row"><span class="detail-label">Date of Birth</span><span class="detail-value">' + data.dob + '</span></div>' +
+                '<div class="detail-row"><span class="detail-label">Gender</span><span class="detail-value">' + data.gender + '</span></div>' +
+                '<div class="detail-row"><span class="detail-label">Nationality</span><span class="detail-value">' + data.nationality + '</span></div>' +
+                '<div class="detail-row"><span class="detail-label">Father</span><span class="detail-value">' + data.father + '</span></div>' +
+                '<div class="detail-row"><span class="detail-label">Mother</span><span class="detail-value">' + data.mother + '</span></div>';
+            document.getElementById('biodata-box').innerHTML = html;
+        })
+        .catch(function(err){
+            document.getElementById('biodata-box').innerHTML = '<p class="error">Error loading personal details.</p>';
+            console.error(err);
+        });
 });
 </script>
+
 </body>
 </html>
